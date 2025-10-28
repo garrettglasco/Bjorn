@@ -1,5 +1,5 @@
 //
-//  NewView.swift
+//  NewWorkoutView.swift
 //  Bjorn
 //
 //  Created by gmac on 10/21/25.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct NewView: View {
+struct NewWorkoutView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    NewView()
+    NewWorkoutView()
 }

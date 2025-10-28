@@ -1,5 +1,5 @@
 //
-//  NewExersiceViewModel.swift
+//  NewViewModel.swift
 //  Bjorn
 //
 //  Created by gmac on 10/21/25.
