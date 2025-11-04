@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct AnalysisView: View {
+    @StateObject var viewModel = AnalysisViewModel()
+    
+    private let userId: String?
+    
+    init(userId: String? = nil) {
+        self.userId = userId
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("graph")
+            }
+            .navigationTitle(Text("Analysis"))
+            .toolbar {
+                Button {
+                    viewModel.showingNewWorkoutView.toggle()
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+//            .sheet(isPresented: $viewModel.showingNewWorkoutView) {
+//                NewWorkoutLogView(NewLogPresented: $viewModel.showingNewWorkoutView)
+        }
     }
 }
 

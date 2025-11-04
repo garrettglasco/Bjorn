@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import Combine
+
+class AnalysisViewModel: ObservableObject {
+    
+    @Published var showingNewWorkoutView = false
+    
+    init () {
+        
+    }
+}

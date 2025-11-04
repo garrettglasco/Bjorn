@@ -15,7 +15,7 @@ struct ExerciseItemView: View {
             }
             Spacer()
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, 2)
     }
 }
 

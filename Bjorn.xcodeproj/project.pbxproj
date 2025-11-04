@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FA6265252EA6E10800CC73F8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FA6265242EA6E10800CC73F8 /* FirebaseAuth */; };
+		FA6265272EA6E11100CC73F8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FA6265262EA6E11100CC73F8 /* FirebaseFirestore */; };
+		FA6265292EA6E11400CC73F8 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA6265282EA6E11400CC73F8 /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FA6264C52EA6DF3D00CC73F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +33,52 @@
 		FA6264B72EA6DF3D00CC73F8 /* Bjorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bjorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6264C42EA6DF3D00CC73F8 /* BjornTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BjornTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6264CE2EA6DF3D00CC73F8 /* BjornUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BjornUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6265E92EB1692000CC73F8 /* Bjorn.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Bjorn.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FA6264E52EA6DF5800CC73F8 /* Exceptions for "Bjorn" folder in "BjornTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Others/GoogleService-Info.plist",
+			);
+			target = FA6264C32EA6DF3D00CC73F8 /* BjornTests */;
+		};
+		FA6264E62EA6DF5800CC73F8 /* Exceptions for "Bjorn" folder in "BjornUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Others/GoogleService-Info.plist",
+			);
+			target = FA6264CD2EA6DF3D00CC73F8 /* BjornUITests */;
+		};
+		FA6265432EA6E27100CC73F8 /* Exceptions for "Bjorn" folder in "Bjorn" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Others/Extensions.swift,
+			);
+			target = FA6264B62EA6DF3D00CC73F8 /* Bjorn */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		FA6265442EA6E27100CC73F8 /* Exceptions for "Bjorn" folder in "Copy Bundle Resources" phase from "Bjorn" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = FA6264B52EA6DF3D00CC73F8 /* Resources */;
+			membershipExceptions = (
+				Others/Extensions.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FA6264B92EA6DF3D00CC73F8 /* Bjorn */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FA6265432EA6E27100CC73F8 /* Exceptions for "Bjorn" folder in "Bjorn" target */,
+				FA6265442EA6E27100CC73F8 /* Exceptions for "Bjorn" folder in "Copy Bundle Resources" phase from "Bjorn" target */,
+				FA6264E52EA6DF5800CC73F8 /* Exceptions for "Bjorn" folder in "BjornTests" target */,
+				FA6264E62EA6DF5800CC73F8 /* Exceptions for "Bjorn" folder in "BjornUITests" target */,
+			);
 			path = Bjorn;
 			sourceTree = "<group>";
 		};
@@ -52,6 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6265252EA6E10800CC73F8 /* FirebaseAuth in Frameworks */,
+				FA6265292EA6E11400CC73F8 /* FirebaseCore in Frameworks */,
+				FA6265272EA6E11100CC73F8 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +125,11 @@
 		FA6264AE2EA6DF3D00CC73F8 = {
 			isa = PBXGroup;
 			children = (
+				FA6265E92EB1692000CC73F8 /* Bjorn.xctestplan */,
 				FA6264B92EA6DF3D00CC73F8 /* Bjorn */,
 				FA6264C72EA6DF3D00CC73F8 /* BjornTests */,
 				FA6264D12EA6DF3D00CC73F8 /* BjornUITests */,
+				FA6265232EA6E10800CC73F8 /* Frameworks */,
 				FA6264B82EA6DF3D00CC73F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +142,13 @@
 				FA6264CE2EA6DF3D00CC73F8 /* BjornUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FA6265232EA6E10800CC73F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +171,9 @@
 			);
 			name = Bjorn;
 			packageProductDependencies = (
+				FA6265242EA6E10800CC73F8 /* FirebaseAuth */,
+				FA6265262EA6E11100CC73F8 /* FirebaseFirestore */,
+				FA6265282EA6E11400CC73F8 /* FirebaseCore */,
 			);
 			productName = Bjorn;
 			productReference = FA6264B72EA6DF3D00CC73F8 /* Bjorn.app */;
@@ -195,6 +257,9 @@
 			);
 			mainGroup = FA6264AE2EA6DF3D00CC73F8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FA6265222EA6E0FA00CC73F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FA6264B82EA6DF3D00CC73F8 /* Products */;
 			projectDirPath = "";
@@ -605,6 +670,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA6265222EA6E0FA00CC73F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA6265242EA6E10800CC73F8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA6265222EA6E0FA00CC73F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FA6265262EA6E11100CC73F8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA6265222EA6E0FA00CC73F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		FA6265282EA6E11400CC73F8 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA6265222EA6E0FA00CC73F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA6264AF2EA6DF3D00CC73F8 /* Project object */;
 }

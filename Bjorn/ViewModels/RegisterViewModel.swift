@@ -44,7 +44,7 @@ class RegisterViewModel: ObservableObject {
         let database = Firestore.firestore()
         try? database.collection("users")
             .document(id)
-            .setData(newUser.asDictionary())
+            .setData(encodeToDictionary(newUser))
     }
     
     private func validate() -> Bool {
@@ -63,5 +63,18 @@ class RegisterViewModel: ObservableObject {
         }
         
         return true
+    }
+    
+    /// Encodes any Encodable value to a [String: Any] dictionary.
+    /// Falls back to an empty dictionary if encoding/serialization fails.
+    private func encodeToDictionary<T: Encodable>(_ value: T) -> [String: Any] {
+        do {
+            let data = try JSONEncoder().encode(value)
+            let object = try JSONSerialization.jsonObject(with: data, options: [])
+            return object as? [String: Any] ?? [:]
+        } catch {
+            print("[RegisterViewModel] Failed to encode to dictionary: \(error)")
+            return [:]
+        }
     }
 }
