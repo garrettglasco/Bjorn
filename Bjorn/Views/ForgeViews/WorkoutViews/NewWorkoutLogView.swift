@@ -47,10 +47,11 @@ struct NewWorkoutLogView: View {
                                 ScrollView { // Make content scrollable vertically
                                     ExerciseFormView(
                                         exerciseForm: $viewModel.exerciseForms[index],
+                                        exerciseIndex: index + 1,
                                         exercises: exercises,
                                         integerFormatter: integerFormatter
                                     )
-                                    .padding()
+                                    .padding(.vertical, 8)
                                 }
                                 .tag(index)
                             }

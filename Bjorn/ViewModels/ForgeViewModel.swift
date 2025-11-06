@@ -8,17 +8,38 @@
 import Foundation
 import SwiftUI
 import Combine
+import FirebaseFirestore
 import FirebaseAuth
 
 class ForgeViewModel: ObservableObject {
-    @Published var userId: String = ""
+//    @Published var userId: String = ""
     @Published var exercises: [Exercise] = []
     @Published var workout: [Workout] = []
 
+    private let userId: String
     
-    init() {}
+    init(userId: String) {
+        self.userId = userId
+    }
     
-    func delete(id: String) {
+    func deleteExercise(id: String) {
+        let db = Firestore.firestore()
         
+        db.collection("users")
+            .document(self.userId)
+            .collection("exercises")
+            .document(id)
+            .delete()
+    }
+    
+    func deleteWorkout(id: String) {
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(self.userId)
+            .collection("workouts")
+            .document(id)
+            .delete()
     }
 }
+

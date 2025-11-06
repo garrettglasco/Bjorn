@@ -2,7 +2,7 @@ import SwiftUI
 import FirebaseFirestore
 
 struct ForgeView: View {
-    @StateObject var viewModel = ForgeViewModel()
+    @StateObject var viewModel: ForgeViewModel
     @FirestoreQuery var exercises: [Exercise]
     @FirestoreQuery var workouts: [Workout]
     
@@ -18,6 +18,7 @@ struct ForgeView: View {
         self._workouts = FirestoreQuery(
             collectionPath: "users/\(userId)/workouts"
         )
+        self._viewModel = StateObject(wrappedValue: ForgeViewModel(userId: userId))
     }
     
     var body: some View {
@@ -38,11 +39,9 @@ struct ForgeView: View {
                                     Button("Modify") { }
                                         .tint(.blue)
                                     
-                                    Button(role: .destructive) {
-                                        viewModel.delete(id: exercise.id)
-                                    } label: {
-                                        Label("Delete", systemImage: "trash")
-                                    }
+                                    Button("Delete") {
+                                        viewModel.deleteExercise(id: exercise.id)
+                                    }.tint(.red)
                                 }
                         }
                         .listStyle(PlainListStyle())

@@ -37,9 +37,10 @@ struct WorkoutDetail: Identifiable, Codable {
     var id: String
     var workoutId: String
     var exerciseId: String
-    var orderNum: Int
+    var weight: Double
+    var SetNum: Int
     var repNum: Int?
-    var restSeconds: Int?    // rest in seconds
+    var restVal: Int?    // rest in seconds
 }
 
 // MARK: - WorkoutLog (one completed workout instance)
